@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TransactionViewer</string>
+    
+    <string name="transaction_activity_title">Products</string>
+    <string name="transaction_details_activity_title">Transactions for</string>
+    <string name="transaction_details_activity_empty_title">Transaction Details</string>
+    
+    <string name="empty_screen_text">Something went wrong, please try again later</string>
+    
+</resources>

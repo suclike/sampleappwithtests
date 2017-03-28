@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1C2638</color>
+    <color name="colorPrimaryDark">#121824</color>
+    <color name="colorAccent">#F8A53B</color>
+
+    <!-- Text colors-->
+    <color name="text_color_primary">#4F413D</color>
+    <color name="text_color_secondary">#899FC5</color>
+    
+    <color name="recycle_view_default_color">#F5F7F9</color>
+    <color name="recycle_view_header_color">#C0C8C0</color>
+
+</resources>
