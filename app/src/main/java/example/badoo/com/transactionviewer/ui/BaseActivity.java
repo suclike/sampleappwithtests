@@ -1,7 +1,5 @@
 package example.badoo.com.transactionviewer.ui;
 
-import javax.inject.Inject;
-
 import android.os.Bundle;
 
 import android.support.annotation.LayoutRes;
@@ -25,12 +23,7 @@ import example.badoo.com.transactionviewer.di.ActivityComponent;
 import example.badoo.com.transactionviewer.di.ApplicationComponent;
 import example.badoo.com.transactionviewer.di.module.ActivityModule;
 
-import rx.subscriptions.CompositeSubscription;
-
 public abstract class BaseActivity extends AppCompatActivity {
-
-    @Inject
-    CompositeSubscription compositeSubscription;
 
     @Bind(R.id.list_recycler_view_toolbar)
     Toolbar toolbar;
@@ -66,13 +59,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         initRecycleView(recyclerView);
 
         setupActionBar(toolbar, getActionBarTitle());
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-        compositeSubscription.clear();
     }
 
     @LayoutRes

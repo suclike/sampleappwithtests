@@ -27,7 +27,12 @@ import example.badoo.com.transactionviewer.ui.adapter.TransactionListAdapter;
 import example.badoo.com.transactionviewer.ui.model.presenter.TransactionListPresenter;
 import example.badoo.com.transactionviewer.ui.model.view.TransactionListView;
 
+import rx.subscriptions.CompositeSubscription;
+
 public class TransactionListActivity extends BaseActivity implements TransactionListView {
+
+    @Inject
+    CompositeSubscription compositeSubscription;
 
     @Inject
     TransactionListPresenter transactionListPresenter;
@@ -56,6 +61,8 @@ public class TransactionListActivity extends BaseActivity implements Transaction
         super.onDestroy();
 
         transactionListPresenter.detachView();
+
+        compositeSubscription.unsubscribe();
     }
 
     @Override

@@ -14,8 +14,6 @@ import dagger.Provides;
 
 import example.badoo.com.transactionviewer.di.qualifier.AppScope;
 
-import rx.subscriptions.CompositeSubscription;
-
 @Module
 public class ApplicationModule {
 
@@ -45,11 +43,5 @@ public class ApplicationModule {
     @Singleton
     Gson provideGson() {
         return new GsonBuilder().create();
-    }
-
-    @Provides
-    @Singleton
-    CompositeSubscription provideCompositeSubscription() {
-        return new CompositeSubscription();
     }
 }

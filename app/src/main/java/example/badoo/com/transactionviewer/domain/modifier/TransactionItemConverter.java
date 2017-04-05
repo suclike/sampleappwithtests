@@ -64,6 +64,8 @@ public class TransactionItemConverter implements DataTransformer<RawTransaction,
 
     @VisibleForTesting
     static RawRate getConversionRate(final List<RawRate> rawRateTransactions, final String currency) {
+
+        // todo doesn't cover all the cases, rework!
         for (int i = 0; i < rawRateTransactions.size(); i++) {
             if (rawRateTransactions.get(i).from.equalsIgnoreCase(currency)) {
                 return rawRateTransactions.get(i);

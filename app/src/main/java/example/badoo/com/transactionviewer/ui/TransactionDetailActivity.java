@@ -23,7 +23,12 @@ import example.badoo.com.transactionviewer.ui.adapter.TransactionDetailAdapter;
 import example.badoo.com.transactionviewer.ui.model.presenter.TransactionDetailPresenter;
 import example.badoo.com.transactionviewer.ui.model.view.TransactionDetailView;
 
+import rx.subscriptions.CompositeSubscription;
+
 public class TransactionDetailActivity extends BaseActivity implements TransactionDetailView {
+
+    @Inject
+    CompositeSubscription compositeSubscription;
 
     @Inject
     TransactionDetailPresenter transactionDetailPresenter;
@@ -83,9 +88,10 @@ public class TransactionDetailActivity extends BaseActivity implements Transacti
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish();
+    protected void onDestroy() {
+        super.onDestroy();
+
+        compositeSubscription.unsubscribe();
     }
 
     @Override
