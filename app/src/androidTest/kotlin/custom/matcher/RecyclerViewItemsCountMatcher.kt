@@ -1,4 +1,4 @@
-package custom
+package custom.matcher
 
 import org.hamcrest.BaseMatcher
 import org.hamcrest.Description

@@ -8,7 +8,7 @@ import android.support.test.espresso.matcher.ViewMatchers.isDisplayed
 import android.support.v7.widget.RecyclerView
 
 import android.view.View
-import custom.RecyclerViewItemsCountMatcher
+import custom.matcher.RecyclerViewItemsCountMatcher
 
 import org.hamcrest.Matcher
 import org.hamcrest.Matchers.allOf
